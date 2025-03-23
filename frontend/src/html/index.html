@@ -13,10 +13,11 @@
 
 <body>
   <!--  Body Wrapper -->
+  <div class="loginregisterScreen" id="loginregisterScreen"></div>
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
     <!-- Sidebar Start -->
-    <aside class="left-sidebar"> 
+    <aside class="left-sidebar" id="left-sidebar"> 
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
@@ -47,7 +48,7 @@
               <span class="hide-menu">UI COMPONENTS</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#buttons" aria-expanded="false">
+              <a class="sidebar-link" href="#overview" aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:layers-minimalistic-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
@@ -63,7 +64,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#uicard" aria-expanded="false">
+              <a class="sidebar-link" href="#tasks" aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:list-check-minimalistic-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
@@ -79,7 +80,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="#typography" aria-expanded="false">
+              <a class="sidebar-link" href="#groups" aria-expanded="false">
                 <span>
                  <iconify-icon icon="fluent:people-community-20-filled" class="fs-6"></iconify-icon>
                 </span>
@@ -91,7 +92,7 @@
               <span class="hide-menu">ACCOUNT</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+              <a class="sidebar-link" href="#login" aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:login-3-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
@@ -99,7 +100,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+              <a class="sidebar-link" href="#register" aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:user-plus-rounded-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
@@ -108,14 +109,14 @@
             </li>
             <li class="nav-small-cap">
               <iconify-icon icon="solar:menu-dots-linear" class="nav-small-cap-icon fs-4" class="fs-6"></iconify-icon>
-              <span class="hide-menu">EXTRA</span>
+              <span class="hide-menu">SOCIAL</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="#icon-tabler" aria-expanded="false">
                 <span>
                   <iconify-icon icon="solar:sticker-smile-circle-2-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
-                <span class="hide-menu">Icons</span>
+                <span class="hide-menu">Friends</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -123,7 +124,7 @@
                 <span>
                   <iconify-icon icon="solar:planet-3-bold-duotone" class="fs-6"></iconify-icon>
                 </span>
-                <span class="hide-menu">Sample Page</span>
+                <span class="hide-menu">Leaderboard</span>
               </a>
             </li>
           </ul>
@@ -211,6 +212,7 @@
   <script src="../assets/js/dashboard.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="../assets/js/app.js"></script>
+  <script src="../components/task-mainTask.js"></script>
 </body>
 
 </html>

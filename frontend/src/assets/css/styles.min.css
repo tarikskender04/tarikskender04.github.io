@@ -6483,6 +6483,7 @@ textarea.form-control-lg {
   -webkit-box-shadow: var(--bs-modal-box-shadow);
           box-shadow: var(--bs-modal-box-shadow);
   outline: 0;
+  padding: 1rem;
 }
 
 .modal-backdrop {

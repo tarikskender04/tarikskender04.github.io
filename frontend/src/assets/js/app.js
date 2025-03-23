@@ -1,14 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
   function loadPage(page) {
-    fetch(`../pages/${page}.html`)
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("container-fluid").innerHTML = data;
-      })
-      .catch(() => {
-        document.getElementById("container-fluid").innerHTML =
-          "<h2>Page Not Found</h2>";
-      });
+    $.ajax({
+      url: `../pages/${page}.html`,
+      method: "GET",
+      success: function (data) {
+        if (page === "login" || page === "register") {
+          // Load content into the login/register screen
+          $(".loginregisterScreen").html(data);
+        } else {
+          $(".loginregisterScreen").html("");
+          $("#container-fluid").html(data);
+        }
+      },
+      error: function () {
+        if (page === "login" || page === "register") {
+          $(".loginregisterScreen").html("<h2>Page Not Found</h2>");
+        } else {
+          $("#container-fluid").html("<h2>Page Not Found</h2>");
+        }
+      },
+    });
   }
 
   function updateContent() {
@@ -16,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadPage(page);
   }
 
-  window.addEventListener("hashchange", updateContent);
-  updateContent(); // Load default page on first load
+  $(window).on("hashchange", updateContent);
+
+  updateContent();
 });
