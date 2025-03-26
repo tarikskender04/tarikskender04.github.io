@@ -59,10 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
       tasks.push(newTask);
       console.log("Tasks Array:", tasks);
 
-      // Close the modal
       taskModalContainer.style.display = "none";
 
-      // Reset the form after submission
       taskForm.reset();
     });
   }
@@ -82,6 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
       taskModalContainer.style.display = "none";
     }
   });
-
-  // Attach the submit event listener inside the loadTaskModal function
 });
