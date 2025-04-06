@@ -1,4 +1,4 @@
-let tasks = [];
+const taskModalContainer = document.getElementById("taskModalContainer");
 document.addEventListener("DOMContentLoaded", function () {
   document.body.addEventListener("click", function (event) {
     if (event.target && event.target.id === "btn-createTask") {
@@ -56,8 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
         createdAt: new Date().toISOString(),
       };
 
-      tasks.push(newTask);
-      console.log("Tasks Array:", tasks);
+      fetch("http://localhost:8000/backend/dao/createTask.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTask),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Task saved:", data);
+          // Handle successful response (e.g., update UI)
+        })
+        .catch((error) => console.error("Error:", error));
 
       taskModalContainer.style.display = "none";
 

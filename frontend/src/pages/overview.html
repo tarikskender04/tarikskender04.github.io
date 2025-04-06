@@ -2,21 +2,70 @@
   <div class="card-body">
     <h5 class="card-title fw-semibold mb-4">Tasks</h5>
     <div class="card">
+      <div id="task-holder" class="card-body p-4"></div>
+      <!-- Edit Task Modal -->
       <div
-        id="task-holder"
-        class="card-body p-4"
-        style="display: flex; flex-direction: row"
+        class="modal fade"
+        id="editTaskModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="editTaskModalLabel"
+        aria-hidden="true"
       >
-        <!-- <button type="button" class="btn btn-primary m-1">Primary</button>
-        <button type="button" class="btn btn-secondary m-1">Secondary</button>
-        <button type="button" class="btn btn-success m-1">Success</button>
-        <button type="button" class="btn btn-danger m-1">Danger</button>
-        <button type="button" class="btn btn-warning m-1">Warning</button>
-        <button type="button" class="btn btn-info m-1">Info</button>
-        <button type="button" class="btn btn-light m-1">Light</button>
-        <button type="button" class="btn btn-dark m-1">Dark</button>
-        <button type="button" class="btn btn-link m-1">Link</button> -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <form id="editTaskForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Hidden input to store the task id -->
+                <input type="hidden" id="editTaskId" name="editTaskId" />
+                <div class="form-group">
+                  <label for="editTaskTitle">Title:</label>
+                  <input
+                    type="text"
+                    id="editTaskTitle"
+                    name="editTaskTitle"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="editTaskDescription">Description:</label>
+                  <textarea
+                    id="editTaskDescription"
+                    name="editTaskDescription"
+                    class="form-control"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+
       <h5 class="card-title fw-semibold mb-4">New Tasks</h5>
       <div class="card mb-0">
         <div class="card-body p-4">
@@ -61,4 +110,5 @@
       >
     </p>
   </div>
+  <script src="pageLoaded"></script>
 </div>
