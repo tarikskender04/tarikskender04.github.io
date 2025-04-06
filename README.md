@@ -19,13 +19,11 @@ Running the Project
 Start the PHP Server:
 To run the project, navigate to the project root in your terminal and run:
 
-bash
-Copy
+<br>
 php -S localhost:8000
 This command starts PHP’s built‑in server. You can then access the application at:
 
-bash
-Copy
+<br>
 http://localhost:8000/frontend/src/html/index.html
 Dynamically Loaded Content:
 The SPA dynamically loads page content via AJAX. When a page (such as the overview) is loaded, the corresponding JavaScript functions fetch and render data from PHP endpoints. This includes full CRUD operations for tasks, all of which are managed using the DAO pattern.
