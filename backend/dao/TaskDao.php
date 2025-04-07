@@ -29,7 +29,6 @@ class TaskDao extends BaseDao {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Update a task (update title and description; add more fields as needed)
     public function updateTask($id, $title, $description) {
         $query = "UPDATE {$this->table} SET title = :title, description = :description WHERE id = :id";
         $params = [
