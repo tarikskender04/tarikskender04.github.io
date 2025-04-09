@@ -3,3 +3,19 @@
   background-color: white;
   border: 0;
 }
+#task-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem; /* Adjust spacing between grid items as needed */
+}
+@media (max-width: 768px) {
+  #task-holder {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #task-holder {
+    grid-template-columns: 1fr;
+  }
+}
